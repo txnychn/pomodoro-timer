@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div id="app">
-        <h1>Pomodoro Timer</h1>
-        <div id="timer">25:00</div>
-        <button id="minus10">-10s</button>
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <button id="reset">Reset</button>
-        <button id="plus10">+10s</button>
+        <div id="title">
+            <h1> Tony's PomoTimer! </h1>
+        </div>
+
+
+        <div id="tabs">
+            <button class="tab" id="work-tab">Work</button>
+            <button class="tab" id="short-break-tab">Short Break</button>
+            <button class="tab" id="long-break-tab">Long Break</button>
+        </div>
+        <div id="timer-container">
+            <div id="timer">25:00</div>
+            <button id="minus10">-10s</button>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+            <button id="plus10">+10s</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
