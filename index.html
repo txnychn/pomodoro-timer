@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -13,12 +14,17 @@
             <h1> Tony's PomoTimer! </h1>
         </div>
 
-
         <div id="tabs">
             <button class="tab" id="work-tab">Work</button>
             <button class="tab" id="short-break-tab">Short Break</button>
             <button class="tab" id="long-break-tab">Long Break</button>
         </div>
+
+        <!-- Progress Bar -->
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
         <div id="timer-container">
             <div id="timer">25:00</div>
             <button id="minus10">-10s</button>
@@ -27,6 +33,40 @@
             <button id="reset">Reset</button>
             <button id="plus10">+10s</button>
         </div>
+
+        <!-- Task List -->
+        <div id="task-list-container">
+            <h2>Tasks</h2>
+            <input type="text" id="task-input" placeholder="Add a task...">
+            <button id="add-task">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+
+        <!-- Settings Button -->
+        <button id="settings-button">Settings</button>
+
+        <!-- Overlay -->
+        <div id="settings-popup-overlay" class="hidden"></div>
+
+        <!-- Popup -->
+        <div id="settings-popup" class="hidden">
+            <h2>Set Timer Durations</h2>
+            <label for="popup-work-duration">Work (minutes): </label>
+            <input type="number" id="popup-work-duration" value="25" min="1"><br>
+            <label for="popup-short-break-duration">Short Break (minutes): </label>
+            <input type="number" id="popup-short-break-duration" value="5" min="1"><br>
+            <label for="popup-long-break-duration">Long Break (minutes): </label>
+            <input type="number" id="popup-long-break-duration" value="15" min="1"><br>
+
+            
+
+            <button id="save-settings">Save</button>
+            <button id="close-popup">Close</button>
+        </div>
+
+
+
+        <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
     </div>
     <script src="script.js"></script>
 </body>
